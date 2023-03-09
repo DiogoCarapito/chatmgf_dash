@@ -1,9 +1,9 @@
 import dash
 from dash import Input, Output, State, html
-from dash import dcc
-import dash_bootstrap_components as dbc
+#from dash import dcc
+#import dash_bootstrap_components as dbc
 
-import requests
+#import requests
 
 app = dash.Dash(__name__)
 
