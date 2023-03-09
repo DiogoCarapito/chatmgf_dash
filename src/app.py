@@ -43,7 +43,7 @@ navbar = dbc.Navbar([
                 dbc.Col(html.Img(src=app.get_asset_url('chatmfg-logo.png'), height='40px')),
                 dbc.Col(dbc.NavbarBrand('ChatMGF', className='ms-2')),
                 ], align='center', className='g-0'),
-            href='/',
+            #href='/',
             style={'textDecoration': 'none'},
         ),
         dbc.NavbarToggler(id='navbar-toggler', n_clicks=0),
