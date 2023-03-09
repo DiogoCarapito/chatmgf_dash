@@ -11,6 +11,7 @@ server = app.server
 
 app.layout = html.Div([
     html.H1('Hello, World!!'),
+    html.H2('Hello, World!!'),
 ])
 
 
