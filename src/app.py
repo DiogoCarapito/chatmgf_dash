@@ -10,20 +10,28 @@ server = app.server
 
 navbar_pages = dbc.Row([
     dbc.Col([
-        dbc.Nav([
+        dbc.Nav(
+        [
             dbc.NavItem(dbc.NavLink(page['name'], href=page['path']))
             for page in dash.page_registry.values()
         ]+[
             dbc.NavItem(dbc.NavLink(html.I(
-                # children='source code',
-                className='bi bi-twitter'),
+                    # children='source code',
+                    className='bi bi-twitter'),
                 href='https://twitter.com/diogocarapito',
                 external_link=True)),
             dbc.NavItem(dbc.NavLink(html.I(
-                #children='source code',
-                className='bi bi-github'),
+                    #children='source code',
+                    className='bi bi-github'),
                 href='https://github.com/DiogoCarapito/',
                 external_link=True)),
+            dbc.NavItem(
+                dbc.NavLink(
+                    html.I(children=[html.Img(src=app.get_asset_url('diogo dalle 200.png'), height='18 px')]),
+                    href='https://diogocarapito.com',
+                    external_link=True,
+                ),
+            ),
         ], navbar=True,)
     ]),
 ])
@@ -32,7 +40,7 @@ navbar = dbc.Navbar([
     dbc.Container([
         html.A(
             dbc.Row([
-                dbc.Col(html.Img(src=app.get_asset_url('mgfchat-logo.png'), height='30px')),
+                dbc.Col(html.Img(src=app.get_asset_url('chatmfg-logo.png'), height='40px')),
                 dbc.Col(dbc.NavbarBrand('ChatMGF', className='ms-2')),
                 ], align='center', className='g-0'),
             href='/',
@@ -47,9 +55,10 @@ navbar = dbc.Navbar([
         ),
     ], fluid=True,),
 ],
-    color='light',
-    dark=False,
+    color='dark',
+    dark=True,
     fixed='top',
+    expand='sm',
 )
 
 

@@ -6,7 +6,7 @@ dash.register_page(
     __name__,
     path='/about',
     title='about',
-    name='about',
+    name='About',
     order=2,
 )
 
