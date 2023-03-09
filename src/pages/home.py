@@ -6,7 +6,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(
     __name__,
     path='/',
-    title='home',
+    title='ChatMGF',
     name='',
     order=1,
 )
