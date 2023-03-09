@@ -2,5 +2,4 @@ Gunicorn
 Dash==2.8.1
 dash_core_components==2.0.0
 dash_html_components==2.0.0
-dash_boom_components==1.4.0
 requests==2.28.2
