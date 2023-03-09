@@ -22,7 +22,7 @@ container = dbc.Container([
                 dbc.Row([
                     dbc.Input(id="input", placeholder="Pergunta-me algo", type="text"),
                 ]),
-            ],
+            ],className="p-3 bg-light rounded-3",
         )),
         dbc.Col(html.Div(), width=3),
     ]),
