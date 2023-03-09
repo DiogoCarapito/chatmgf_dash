@@ -6,6 +6,7 @@ from dash import Input, Output, State, html
 #import requests
 
 app = dash.Dash(__name__)
+server = app.server
 
 
 app.layout = html.Div([
@@ -13,5 +14,5 @@ app.layout = html.Div([
 ])
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run_server(debug=True)
