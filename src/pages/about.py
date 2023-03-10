@@ -11,7 +11,8 @@ dash.register_page(
 )
 
 container = dbc.Container([
-    html.H3('about'),
+    html.Br(),
+    html.H1('About', style={'textAlign': 'center'}),
 ], fluid=True)
 
 
