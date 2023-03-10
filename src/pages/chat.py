@@ -30,7 +30,10 @@ chat_card = dbc.Card([
                 ], width=10),
                 dbc.Col([
                     dbc.Button(color="info", className="me-1, bi bi-send", id="send"),
-                ], width=2),
+                ], width=1),
+                dbc.Col([
+                    dbc.Button(color="warning", className="me-1, bi bi-trash", id="trash"),
+                ], width=1),
             ]),
         ]),
     ]),
@@ -62,14 +65,18 @@ def layout():
 @callback(
     Output('output', 'children'),
     Input('send', 'n_clicks'),
+    Input('trash', 'n_clicks'),
     State('input', 'value'),
 
 )
 
-def prompt(n_clicks, input):
-    if n_clicks is not None:
+def prompt(send, trash, input):
+    '''if trash is not None:
+        trash = 0
+        return '''''
+    if send is not None:
         chat.append(html.Div(html.P(input)))
-        n_clicks = 0
+        send = 0
         return chat
 
 
