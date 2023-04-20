@@ -6,7 +6,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(
     __name__,
     path='/',
-    title='ChatMGF',
+    title='ChatMGF.com',
     name='Chat',
     order=1,
 )
@@ -26,13 +26,13 @@ chat_card = dbc.Card([
         html.Div([
             dbc.Row([
                 dbc.Col([
-                    dbc.Input(id="input", placeholder="Pergunta-me algo", type="text", value=''),
+                    dbc.Input(id="input_text", placeholder="Pergunta-me algo", type="text", value=''),
                 ], width=10),
                 dbc.Col([
                     dbc.Button(color="info", className="me-1, bi bi-send", id="send"),
                 ], width=1),
                 dbc.Col([
-                    dbc.Button(color="warning", className="me-1, bi bi-trash", id="trash"),
+                    dbc.Button(color="primary", className="me-1, bi bi-trash", id="trash"),
                 ], width=1),
             ]),
         ]),
@@ -66,18 +66,15 @@ def layout():
     Output('output', 'children'),
     Input('send', 'n_clicks'),
     Input('trash', 'n_clicks'),
-    State('input', 'value'),
-
+    State('input_text', 'value'),
 )
 
 def prompt(send, trash, input):
-    '''if trash is not None:
+    if trash is not None:
         trash = 0
-        return '''''
+        input = None
+        return ''
     if send is not None:
         chat.append(html.Div(html.P(input)))
         send = 0
         return chat
-
-
-
