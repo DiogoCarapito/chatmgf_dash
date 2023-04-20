@@ -6,7 +6,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(
     __name__,
     path='/',
-    title='ChatMGF.com',
+    title='ChatMGF',
     name='Chat',
     order=1,
 )
@@ -43,7 +43,7 @@ container = dbc.Container([
     html.Br(),
 
     dbc.Row([
-        html.H1('ChatMGF', style={'textAlign': 'center'}),
+        html.H1('ChatMGF.com', style={'textAlign': 'center'}),
     ]),
 
     html.Br(),
